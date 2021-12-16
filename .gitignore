@@ -1,4 +1,5 @@
 #Cadence files
+*.dm
 *.log
 *.oa.cdslck.*
 *.lock*
