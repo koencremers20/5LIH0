@@ -1,4 +1,5 @@
 #Cadence files
+*.log
 *.oa.cdslck.*
 *.lock*
 INCA*
