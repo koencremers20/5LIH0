@@ -1,25 +1,17 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 08/16/2019 17:05 (sjfhw025) $
 \o Sub version:		sub-version  s053 
-\o Arguments:		-mpssession virtuoso7160 -mpshost es-tahiti.ele.tue.nl 
+\o Arguments:		-mpssession virtuoso2656 -mpshost es-tahiti.ele.tue.nl 
 \o Working Directory:	es-tahiti.ele.tue.nl:/home/dicd21/dicd21028/5LIH0
 \o 64-bit offsets
 \o Qt version: 		5.9.1
 \o Log file is "/home/dicd21/dicd21028/5LIH0/libManager.log".
 \o Opening libManager window.
-\a nrResizeWindow(cdsLibManager list(0 0 1414 760))
+\a nrResizeWindow(cdsLibManager list(1344 343 1028 760))
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(1344 343 1414 760))
 \o changeWorkingDir("/home/dicd21/dicd21028/5LIH0") unnecessary.
 \o ddSetForcedLib("") unnecessary.
 \o MPS service: map window
 \o Library Manager customization server connected.
-\a cdsLibManager->libListBox->value = "5LIH0"
-\a cdsLibManager->libLineEdit->value = "5LIH0"
-\a nrSetWindowVisibility(cdsLibManager "hide")
-\a nrResizeWindow(cdsLibManager list(0 0 1414 760))
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetWindowVisibility(cdsLibManager "show")
-\a nrResizeWindow(cdsLibManager list(1344 343 1414 760))
 \o MPS service: shutdown
 \o libManager is exiting.
 \a exit(0)
