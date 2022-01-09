@@ -1,5 +1,5 @@
-artistResMgrCalcExprSetup("true" "plot" "E0" "riseTime(v("/net8>" ?result "tran")  0 nil 1 nil 10 90 nil "time" )")
-artistResMgrCalcExprSetup("true" "plot" "E1" "fallTime(v("/net8>" ?result "tran")  1 nil 0 nil 10 90 nil "time" )")
+artistResMgrCalcExprSetup("true" "plot" "E0" "riseTime(v("/net8" ?result "tran")  0 nil 1 nil 10 90 nil "time" )")
+artistResMgrCalcExprSetup("true" "plot" "E1" "fallTime(v("/net8" ?result "tran")  1 nil 0 nil 10 90 nil "time" )")
 artistResMgrCalcExprSetup("true" "plot" "E2" "riseTime(v("/S<0>" ?result "tran")  0 nil 1 nil 10 90 nil "time" )")
 artistResMgrCalcExprSetup("true" "plot" "E3" "fallTime(v("/S<0>" ?result "tran")  1 nil 0 nil 10 90 nil "time" )")
 artistResMgrCalcExprSetup("true" "plot" "E4" "riseTime(v("/S<1>" ?result "tran")  0 nil 1 nil 10 90 nil "time" )")
