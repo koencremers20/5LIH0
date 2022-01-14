@@ -1,0 +1,14 @@
+    M5 (OUT net026 GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M4 (net026 B GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M0 (net026 A GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M2 (net031 A VDD VDD) PMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+    M3 (OUT net026 VDD VDD) PMOS_VTG w=180.0n l=50n as=1.89e-14 \
+        ad=1.89e-14 ps=390.0n pd=390.0n ld=105n ls=105n m=1
+    M1 (net026 B net031 net031) PMOS_VTG w=360.0n l=50n as=3.78e-14 \
+        ad=3.78e-14 ps=570.0n pd=570.0n ld=105n ls=105n m=1
+ends OR
+// End of subcircuit definition.

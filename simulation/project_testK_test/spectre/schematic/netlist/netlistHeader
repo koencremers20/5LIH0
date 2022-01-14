@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Jan 10 14:25:02 2022
+// Design library name: 5LIH0
+// Design cell name: project_testK_test
+// Design view name: schematic
+simulator lang=spectre
+global 0

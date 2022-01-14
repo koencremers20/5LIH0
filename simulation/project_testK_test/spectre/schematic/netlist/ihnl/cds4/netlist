@@ -1,0 +1,5 @@
+    I0 (G net18 GND Gnew VDD) OR
+    I2 (P Pold GND Pnew VDD) AND
+    I1 (Gold P GND net18 VDD) AND
+ends Black_cell
+// End of subcircuit definition.

@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: Preproc_cell
+// View name: schematic
+subckt Preproc_cell A B G GND VDD p

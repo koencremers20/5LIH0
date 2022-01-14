@@ -1,0 +1,94 @@
+
+// Library name: 5LIH0
+// Cell name: project_testK_test
+// View name: schematic
+I12 (A\<0\> A\<1\> A\<2\> A\<3\> A\<4\> A\<5\> A\<6\> A\<7\> A\<8\> A\<9\> \
+        A\<10\> A\<11\> A\<12\> A\<13\> A\<14\> A\<15\> B\<0\> B\<1\> \
+        B\<2\> B\<3\> B\<4\> B\<5\> B\<6\> B\<7\> B\<8\> B\<9\> B\<10\> \
+        B\<11\> B\<12\> B\<13\> B\<14\> B\<15\> Cin net8 0 S\<0\> S\<1\> \
+        S\<2\> S\<3\> S\<4\> S\<5\> S\<6\> S\<7\> S\<8\> S\<9\> S\<10\> \
+        S\<11\> S\<12\> S\<13\> S\<14\> S\<15\> net015) project_testR_OG2
+I72 (B\<0\>) rand_bit_stream2 tperiod=2n seed=31 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I71 (A\<15\>) rand_bit_stream2 tperiod=2n seed=15 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I55 (A\<0\>) rand_bit_stream2 tperiod=2n seed=0 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I56 (A\<1\>) rand_bit_stream2 tperiod=2n seed=1 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I69 (A\<14\>) rand_bit_stream2 tperiod=2n seed=14 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I68 (A\<13\>) rand_bit_stream2 tperiod=2n seed=13 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I67 (A\<12\>) rand_bit_stream2 tperiod=2n seed=12 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I66 (A\<11\>) rand_bit_stream2 tperiod=2n seed=11 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I65 (A\<10\>) rand_bit_stream2 tperiod=2n seed=10 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I64 (A\<9\>) rand_bit_stream2 tperiod=2n seed=9 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I63 (A\<8\>) rand_bit_stream2 tperiod=2n seed=8 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I62 (A\<7\>) rand_bit_stream2 tperiod=2n seed=7 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I61 (A\<6\>) rand_bit_stream2 tperiod=2n seed=6 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I60 (A\<5\>) rand_bit_stream2 tperiod=2n seed=5 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I59 (A\<4\>) rand_bit_stream2 tperiod=2n seed=4 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I58 (A\<3\>) rand_bit_stream2 tperiod=2n seed=3 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I57 (A\<2\>) rand_bit_stream2 tperiod=2n seed=2 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I73 (B\<1\>) rand_bit_stream2 tperiod=2n seed=30 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I74 (B\<2\>) rand_bit_stream2 tperiod=2n seed=29 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I75 (B\<3\>) rand_bit_stream2 tperiod=2n seed=28 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I76 (B\<4\>) rand_bit_stream2 tperiod=2n seed=27 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I77 (B\<5\>) rand_bit_stream2 tperiod=2n seed=26 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I78 (B\<6\>) rand_bit_stream2 tperiod=2n seed=25 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I79 (B\<7\>) rand_bit_stream2 tperiod=2n seed=24 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I80 (B\<8\>) rand_bit_stream2 tperiod=2n seed=23 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I81 (B\<9\>) rand_bit_stream2 tperiod=2n seed=22 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I82 (B\<10\>) rand_bit_stream2 tperiod=2n seed=20 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I83 (B\<11\>) rand_bit_stream2 tperiod=2n seed=21 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I84 (B\<12\>) rand_bit_stream2 tperiod=2n seed=19 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I85 (B\<13\>) rand_bit_stream2 tperiod=2n seed=18 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I86 (B\<14\>) rand_bit_stream2 tperiod=2n seed=17 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I87 (B\<15\>) rand_bit_stream2 tperiod=2n seed=16 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+CIN_Out (Cin) rand_bit_stream2 tperiod=2n seed=40 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+C19 (0 S\<15\>) capacitor c=40f
+C18 (0 S\<14\>) capacitor c=40f
+C17 (0 S\<13\>) capacitor c=40f
+C16 (0 S\<12\>) capacitor c=40f
+C15 (0 S\<11\>) capacitor c=40f
+C14 (0 S\<10\>) capacitor c=40f
+C12 (0 S\<8\>) capacitor c=40f
+C11 (0 S\<7\>) capacitor c=40f
+C7 (0 S\<6\>) capacitor c=40f
+C6 (0 S\<5\>) capacitor c=40f
+C5 (0 S\<4\>) capacitor c=40f
+C4 (0 S\<3\>) capacitor c=40f
+C3 (0 S\<2\>) capacitor c=40f
+C2 (0 S\<1\>) capacitor c=40f
+C1 (0 S\<0\>) capacitor c=40f
+C0 (0 net8) capacitor c=40f
+C13 (0 S\<9\>) capacitor c=40f
+V0 (net015 0) vsource dc=1 type=dc

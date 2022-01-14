@@ -1,0 +1,4 @@
+    I0 (A B GND net3 VDD) NAND
+    I2 (GND net3 OUT VDD) INV
+ends AND
+// End of subcircuit definition.

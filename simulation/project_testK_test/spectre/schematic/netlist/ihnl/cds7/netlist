@@ -1,0 +1,26 @@
+    M7 (VDD A net024 VDD) PMOS_VTG w=540.0n l=50n as=5.67e-14 ad=5.67e-14 \
+        ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M6 (net024 Bi OUT net024) PMOS_VTG w=540.0n l=50n as=5.67e-14 \
+        ad=5.67e-14 ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M8 (Ai A VDD VDD) PMOS_VTG w=180.0n l=50n as=1.89e-14 ad=1.89e-14 \
+        ps=390.0n pd=390.0n ld=105n ls=105n m=1
+    M10 (Bi B VDD VDD) PMOS_VTG w=180.0n l=50n as=1.89e-14 ad=1.89e-14 \
+        ps=390.0n pd=390.0n ld=105n ls=105n m=1
+    M1 (OUT B net06 net06) PMOS_VTG w=540.0n l=50n as=5.67e-14 ad=5.67e-14 \
+        ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M0 (net06 Ai VDD VDD) PMOS_VTG w=540.0n l=50n as=5.67e-14 ad=5.67e-14 \
+        ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M5 (GND Bi net023 GND) NMOS_VTG w=270.0n l=50n as=2.835e-14 \
+        ad=2.835e-14 ps=480.0n pd=480.0n ld=105n ls=105n m=1
+    M4 (OUT A net18 net18) NMOS_VTG w=270.0n l=50n as=2.835e-14 \
+        ad=2.835e-14 ps=480.0n pd=480.0n ld=105n ls=105n m=1
+    M11 (Ai A GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M9 (Bi B GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 ps=300n \
+        pd=300n ld=105n ls=105n m=1
+    M3 (net023 Ai OUT net023) NMOS_VTG w=270.0n l=50n as=2.835e-14 \
+        ad=2.835e-14 ps=480.0n pd=480.0n ld=105n ls=105n m=1
+    M2 (net18 B GND GND) NMOS_VTG w=270.0n l=50n as=2.835e-14 ad=2.835e-14 \
+        ps=480.0n pd=480.0n ld=105n ls=105n m=1
+ends XOR
+// End of subcircuit definition.

@@ -1,0 +1,4 @@
+    I0 (B A GND p VDD) XOR
+    I1 (B A GND G VDD) AND
+ends Preproc_cell
+// End of subcircuit definition.

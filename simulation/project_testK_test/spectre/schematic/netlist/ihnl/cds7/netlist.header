@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: XOR
+// View name: schematic
+subckt XOR A B GND OUT VDD

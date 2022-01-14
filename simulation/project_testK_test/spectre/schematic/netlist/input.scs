@@ -1,0 +1,388 @@
+// Generated for: spectre
+// Generated on: Jan 10 14:25:02 2022
+// Design library name: 5LIH0
+// Design cell name: project_testK_test
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/home/dicd21/dicd21028/hspice_nom.include"
+
+// Library name: 5LIH0
+// Cell name: OR
+// View name: schematic
+subckt OR A B GND OUT VDD
+    M5 (OUT net026 GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M4 (net026 B GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M0 (net026 A GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M2 (net031 A VDD VDD) PMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+    M3 (OUT net026 VDD VDD) PMOS_VTG w=180.0n l=50n as=1.89e-14 \
+        ad=1.89e-14 ps=390.0n pd=390.0n ld=105n ls=105n m=1
+    M1 (net026 B net031 net031) PMOS_VTG w=360.0n l=50n as=3.78e-14 \
+        ad=3.78e-14 ps=570.0n pd=570.0n ld=105n ls=105n m=1
+ends OR
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: NAND
+// View name: schematic
+subckt NAND A B GND OUT VDD
+    M1 (OUT B VDD VDD) PMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+    M0 (OUT A VDD VDD) PMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+    M3 (net11 A GND GND) NMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+    M2 (OUT B net11 net11) NMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+ends NAND
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: INV
+// View name: schematic
+subckt INV GND IN OUT VDD
+    M0 (OUT IN VDD VDD) PMOS_VTG w=360.0n l=50n as=3.78e-14 ad=3.78e-14 \
+        ps=570.0n pd=570.0n ld=105n ls=105n m=1
+    M1 (OUT IN GND GND) NMOS_VTG w=180.0n l=50n as=1.89e-14 ad=1.89e-14 \
+        ps=390.0n pd=390.0n ld=105n ls=105n m=1
+ends INV
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: AND
+// View name: schematic
+subckt AND A B GND OUT VDD
+    I0 (A B GND net3 VDD) NAND
+    I2 (GND net3 OUT VDD) INV
+ends AND
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: Black_cell
+// View name: schematic
+subckt Black_cell G GND Gnew Gold P Pnew Pold VDD
+    I0 (G net18 GND Gnew VDD) OR
+    I2 (P Pold GND Pnew VDD) AND
+    I1 (Gold P GND net18 VDD) AND
+ends Black_cell
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: Buffer_cell
+// View name: schematic
+subckt Buffer_cell G GND Gnew VDD
+    I1 (GND net11 Gnew VDD) INV
+    I0 (GND G net11 VDD) INV
+ends Buffer_cell
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: Grey_cell
+// View name: schematic
+subckt Grey_cell G GND Gnew Gold P VDD
+    I0 (G net17 GND Gnew VDD) OR
+    I1 (P Gold GND net17 VDD) AND
+ends Grey_cell
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: XOR
+// View name: schematic
+subckt XOR A B GND OUT VDD
+    M7 (VDD A net024 VDD) PMOS_VTG w=540.0n l=50n as=5.67e-14 ad=5.67e-14 \
+        ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M6 (net024 Bi OUT net024) PMOS_VTG w=540.0n l=50n as=5.67e-14 \
+        ad=5.67e-14 ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M8 (Ai A VDD VDD) PMOS_VTG w=180.0n l=50n as=1.89e-14 ad=1.89e-14 \
+        ps=390.0n pd=390.0n ld=105n ls=105n m=1
+    M10 (Bi B VDD VDD) PMOS_VTG w=180.0n l=50n as=1.89e-14 ad=1.89e-14 \
+        ps=390.0n pd=390.0n ld=105n ls=105n m=1
+    M1 (OUT B net06 net06) PMOS_VTG w=540.0n l=50n as=5.67e-14 ad=5.67e-14 \
+        ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M0 (net06 Ai VDD VDD) PMOS_VTG w=540.0n l=50n as=5.67e-14 ad=5.67e-14 \
+        ps=750.0n pd=750.0n ld=105n ls=105n m=1
+    M5 (GND Bi net023 GND) NMOS_VTG w=270.0n l=50n as=2.835e-14 \
+        ad=2.835e-14 ps=480.0n pd=480.0n ld=105n ls=105n m=1
+    M4 (OUT A net18 net18) NMOS_VTG w=270.0n l=50n as=2.835e-14 \
+        ad=2.835e-14 ps=480.0n pd=480.0n ld=105n ls=105n m=1
+    M11 (Ai A GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 \
+        ps=300n pd=300n ld=105n ls=105n m=1
+    M9 (Bi B GND GND) NMOS_VTG w=90n l=50n as=9.45e-15 ad=9.45e-15 ps=300n \
+        pd=300n ld=105n ls=105n m=1
+    M3 (net023 Ai OUT net023) NMOS_VTG w=270.0n l=50n as=2.835e-14 \
+        ad=2.835e-14 ps=480.0n pd=480.0n ld=105n ls=105n m=1
+    M2 (net18 B GND GND) NMOS_VTG w=270.0n l=50n as=2.835e-14 ad=2.835e-14 \
+        ps=480.0n pd=480.0n ld=105n ls=105n m=1
+ends XOR
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: Postproc_cell
+// View name: schematic
+subckt Postproc_cell G GND P S VDD
+    I0 (G P GND S VDD) XOR
+ends Postproc_cell
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: Preproc_cell
+// View name: schematic
+subckt Preproc_cell A B G GND VDD p
+    I0 (B A GND p VDD) XOR
+    I1 (B A GND G VDD) AND
+ends Preproc_cell
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: INV_post
+// View name: schematic
+subckt INV_post GND IN OUT VDD
+    M0 (OUT IN VDD VDD) PMOS_VTG w=1.44u l=50n as=1.512e-13 ad=1.512e-13 \
+        ps=1.65u pd=1.65u ld=105n ls=105n m=1
+    M1 (OUT IN GND GND) NMOS_VTG w=720.0n l=50n as=7.56e-14 ad=7.56e-14 \
+        ps=930.0n pd=930.0n ld=105n ls=105n m=1
+ends INV_post
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: Buffer_cell_post
+// View name: schematic
+subckt Buffer_cell_post G GND Gnew VDD
+    I1 (GND net11 Gnew VDD) INV_post
+    I0 (GND G net11 VDD) INV_post
+ends Buffer_cell_post
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: project_testR_OG2
+// View name: schematic
+subckt project_testR_OG2 A\<0\> A\<1\> A\<2\> A\<3\> A\<4\> A\<5\> A\<6\> \
+        A\<7\> A\<8\> A\<9\> A\<10\> A\<11\> A\<12\> A\<13\> A\<14\> \
+        A\<15\> B\<0\> B\<1\> B\<2\> B\<3\> B\<4\> B\<5\> B\<6\> B\<7\> \
+        B\<8\> B\<9\> B\<10\> B\<11\> B\<12\> B\<13\> B\<14\> B\<15\> CIN \
+        COUT GND S\<0\> S\<1\> S\<2\> S\<3\> S\<4\> S\<5\> S\<6\> S\<7\> \
+        S\<8\> S\<9\> S\<10\> S\<11\> S\<12\> S\<13\> S\<14\> S\<15\> VDD
+    I76 (G2_15 GND G3_15 G2_11 P2_15 P3_15 P2_11 VDD) Black_cell
+    I75 (G1_15 GND G2_15 G1_13 P1_15 P2_15 P1_13 VDD) Black_cell
+    I74 (G14 GND G1_15 G13 P14 P1_15 P13 VDD) Black_cell
+    I73 (G13 GND G1_14 G12 P13 P1_14 P12 VDD) Black_cell
+    I72 (G1_14 GND G2_14 G1_12 P1_14 P2_14 P1_12 VDD) Black_cell
+    I71 (G2_14 GND G3_14 G2_10 P2_14 P3_14 P2_10 VDD) Black_cell
+    I68 (G2_13 GND G3_13 G2_9 P2_13 P3_13 P2_9 VDD) Black_cell
+    I67 (G1_13 GND G2_13 G1_11 P1_13 P2_13 P1_11 VDD) Black_cell
+    I66 (G12 GND G1_13 G11 P12 P1_13 P11 VDD) Black_cell
+    I65 (G11 GND G1_12 G10 P11 P1_12 P10 VDD) Black_cell
+    I64 (G1_12 GND G2_12 G1_10 P1_12 P2_12 P1_10 VDD) Black_cell
+    I63 (G2_12 GND G3_12 G2_8 P2_12 P3_12 P2_8 VDD) Black_cell
+    I60 (G2_11 GND G3_11 G2_7 P2_11 P3_11 P2_7 VDD) Black_cell
+    I59 (G1_11 GND G2_11 G1_9 P1_11 P2_11 P1_9 VDD) Black_cell
+    I58 (G10 GND G1_11 G9 P10 P1_11 P9 VDD) Black_cell
+    I57 (G9 GND G1_10 G8 P9 P1_10 P8 VDD) Black_cell
+    I56 (G1_10 GND G2_10 G1_8 P1_10 P2_10 P1_8 VDD) Black_cell
+    I55 (G2_10 GND G3_10 G2_6 P2_10 P3_10 P2_6 VDD) Black_cell
+    I52 (G2_9 GND G3_9 G2_5 P2_9 P3_9 P2_5 VDD) Black_cell
+    I51 (G1_9 GND G2_9 G1_7 P1_9 P2_9 P1_7 VDD) Black_cell
+    I50 (G8 GND G1_9 G7 P8 P1_9 P7 VDD) Black_cell
+    I48 (G2_8 GND G3_8 G2_4 P2_8 P3_8 P2_4 VDD) Black_cell
+    I47 (G1_8 GND G2_8 G1_6 P1_8 P2_8 P1_6 VDD) Black_cell
+    I46 (G7 GND G1_8 G6 P7 P1_8 P6 VDD) Black_cell
+    I45 (G6 GND G1_7 G5 P6 P1_7 P5 VDD) Black_cell
+    I44 (G1_7 GND G2_7 G1_5 P1_7 P2_7 P1_5 VDD) Black_cell
+    I39 (G1_6 GND G2_6 G1_4 P1_6 P2_6 P1_4 VDD) Black_cell
+    I38 (G5 GND G1_6 G4 P5 P1_6 P4 VDD) Black_cell
+    I35 (G1_5 GND G2_5 G1_3 P1_5 P2_5 P1_3 VDD) Black_cell
+    I34 (G4 GND G1_5 G3 P4 P1_5 P3 VDD) Black_cell
+    I31 (G1_4 GND G2_4 G1_2 P1_4 P2_4 P1_2 VDD) Black_cell
+    I30 (G3 GND G1_4 G2 P3 P1_4 P2 VDD) Black_cell
+    I25 (G2 GND G1_3 G1 P2 P1_3 P1 VDD) Black_cell
+    I24 (G1 GND G1_2 G0 P1 P1_2 P0 VDD) Black_cell
+    I42 (G3_7 GND G4_7 VDD) Buffer_cell
+    I41 (G3_6 GND G4_6 VDD) Buffer_cell
+    I37 (G3_5 GND G4_5 VDD) Buffer_cell
+    I97 (G3_4 GND G4_4 VDD) Buffer_cell
+    I29 (G2_3 GND G3_3 VDD) Buffer_cell
+    I28 (G2_2 GND G3_2 VDD) Buffer_cell
+    I23 (G1_1 GND G2_1 VDD) Buffer_cell
+    I3 (CIN GND G1_0 VDD) Buffer_cell
+    I77 (G3_15 GND G4_15 G3_7 P3_15 VDD) Grey_cell
+    I70 (G3_14 GND G4_14 G3_6 P3_14 VDD) Grey_cell
+    I69 (G3_13 GND G4_13 G3_5 P3_13 VDD) Grey_cell
+    I62 (G3_12 GND G4_12 G3_4 P3_12 VDD) Grey_cell
+    I61 (G3_11 GND G4_11 G3_3 P3_11 VDD) Grey_cell
+    I54 (G3_10 GND G4_10 G3_2 P3_10 VDD) Grey_cell
+    I53 (G3_9 GND G4_9 G2_1 P3_9 VDD) Grey_cell
+    I49 (G3_8 GND G4_8 G1_0 P3_8 VDD) Grey_cell
+    I43 (G2_7 GND G3_7 G2_3 P2_7 VDD) Grey_cell
+    I40 (G2_6 GND G3_6 G2_2 P2_6 VDD) Grey_cell
+    I36 (G2_5 GND G3_5 G2_1 P2_5 VDD) Grey_cell
+    I32 (G2_4 GND G3_4 G1_0 P2_4 VDD) Grey_cell
+    I27 (G1_3 GND G2_3 G1_1 P1_3 VDD) Grey_cell
+    I26 (G1_2 GND G2_2 G1_0 P1_2 VDD) Grey_cell
+    I22 (G0 GND G1_1 CIN P0 VDD) Grey_cell
+    I93 (P0 GND G1_0 net0128 VDD) Postproc_cell
+    I92 (P1 GND G2_1 net0129 VDD) Postproc_cell
+    I91 (P2 GND G3_2 net0130 VDD) Postproc_cell
+    I90 (P3 GND G3_3 net0131 VDD) Postproc_cell
+    I89 (P4 GND G4_4 net0132 VDD) Postproc_cell
+    I88 (P5 GND G4_5 net0133 VDD) Postproc_cell
+    I87 (P6 GND G4_6 net0116 VDD) Postproc_cell
+    I86 (P7 GND G4_7 net0114 VDD) Postproc_cell
+    I85 (P8 GND G4_8 net0112 VDD) Postproc_cell
+    I84 (P9 GND G4_9 net0110 VDD) Postproc_cell
+    I83 (P10 GND G4_10 net0108 VDD) Postproc_cell
+    I82 (P11 GND G4_11 net0106 VDD) Postproc_cell
+    I81 (P12 GND G4_12 net0104 VDD) Postproc_cell
+    I80 (P13 GND G4_13 net0102 VDD) Postproc_cell
+    I79 (P14 GND G4_14 net099 VDD) Postproc_cell
+    I78 (P15 GND G4_15 net097 VDD) Postproc_cell
+    I21 (A\<15\> B\<15\> G15 GND VDD P15) Preproc_cell
+    I20 (A\<14\> B\<14\> G14 GND VDD P14) Preproc_cell
+    I19 (A\<13\> B\<13\> G13 GND VDD P13) Preproc_cell
+    I18 (A\<12\> B\<12\> G12 GND VDD P12) Preproc_cell
+    I17 (A\<11\> B\<11\> G11 GND VDD P11) Preproc_cell
+    I16 (A\<10\> B\<10\> G10 GND VDD P10) Preproc_cell
+    I15 (A\<9\> B\<9\> G9 GND VDD P9) Preproc_cell
+    I14 (A\<8\> B\<8\> G8 GND VDD P8) Preproc_cell
+    I13 (A\<7\> B\<7\> G7 GND VDD P7) Preproc_cell
+    I12 (A\<6\> B\<6\> G6 GND VDD P6) Preproc_cell
+    I11 (A\<5\> B\<5\> G5 GND VDD P5) Preproc_cell
+    I10 (A\<4\> B\<4\> G4 GND VDD P4) Preproc_cell
+    I9 (A\<3\> B\<3\> G3 GND VDD P3) Preproc_cell
+    I8 (A\<2\> B\<2\> G2 GND VDD P2) Preproc_cell
+    I7 (A\<1\> B\<1\> G1 GND VDD P1) Preproc_cell
+    I6 (A\<0\> B\<0\> G0 GND VDD P0) Preproc_cell
+    I95 (net0371 G15 GND net0137 VDD) OR
+    I96 (G4_15 P15 GND net0371 VDD) AND
+    I114 (net0137 GND COUT VDD) Buffer_cell_post
+    I113 (net097 GND S\<15\> VDD) Buffer_cell_post
+    I112 (net099 GND S\<14\> VDD) Buffer_cell_post
+    I111 (net0102 GND S\<13\> VDD) Buffer_cell_post
+    I110 (net0104 GND S\<12\> VDD) Buffer_cell_post
+    I109 (net0106 GND S\<11\> VDD) Buffer_cell_post
+    I108 (net0108 GND S\<10\> VDD) Buffer_cell_post
+    I107 (net0110 GND S\<9\> VDD) Buffer_cell_post
+    I106 (net0112 GND S\<8\> VDD) Buffer_cell_post
+    I105 (net0114 GND S\<7\> VDD) Buffer_cell_post
+    I104 (net0116 GND S\<6\> VDD) Buffer_cell_post
+    I103 (net0133 GND S\<5\> VDD) Buffer_cell_post
+    I102 (net0132 GND S\<4\> VDD) Buffer_cell_post
+    I101 (net0131 GND S\<3\> VDD) Buffer_cell_post
+    I100 (net0130 GND S\<2\> VDD) Buffer_cell_post
+    I99 (net0128 GND S\<0\> VDD) Buffer_cell_post
+    I98 (net0129 GND S\<1\> VDD) Buffer_cell_post
+ends project_testR_OG2
+// End of subcircuit definition.
+
+// Library name: 5LIH0
+// Cell name: project_testK_test
+// View name: schematic
+I12 (A\<0\> A\<1\> A\<2\> A\<3\> A\<4\> A\<5\> A\<6\> A\<7\> A\<8\> A\<9\> \
+        A\<10\> A\<11\> A\<12\> A\<13\> A\<14\> A\<15\> B\<0\> B\<1\> \
+        B\<2\> B\<3\> B\<4\> B\<5\> B\<6\> B\<7\> B\<8\> B\<9\> B\<10\> \
+        B\<11\> B\<12\> B\<13\> B\<14\> B\<15\> Cin net8 0 S\<0\> S\<1\> \
+        S\<2\> S\<3\> S\<4\> S\<5\> S\<6\> S\<7\> S\<8\> S\<9\> S\<10\> \
+        S\<11\> S\<12\> S\<13\> S\<14\> S\<15\> net015) project_testR_OG2
+I72 (B\<0\>) rand_bit_stream2 tperiod=2n seed=31 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I71 (A\<15\>) rand_bit_stream2 tperiod=2n seed=15 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I55 (A\<0\>) rand_bit_stream2 tperiod=2n seed=0 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I56 (A\<1\>) rand_bit_stream2 tperiod=2n seed=1 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I69 (A\<14\>) rand_bit_stream2 tperiod=2n seed=14 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I68 (A\<13\>) rand_bit_stream2 tperiod=2n seed=13 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I67 (A\<12\>) rand_bit_stream2 tperiod=2n seed=12 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I66 (A\<11\>) rand_bit_stream2 tperiod=2n seed=11 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I65 (A\<10\>) rand_bit_stream2 tperiod=2n seed=10 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I64 (A\<9\>) rand_bit_stream2 tperiod=2n seed=9 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I63 (A\<8\>) rand_bit_stream2 tperiod=2n seed=8 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I62 (A\<7\>) rand_bit_stream2 tperiod=2n seed=7 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I61 (A\<6\>) rand_bit_stream2 tperiod=2n seed=6 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I60 (A\<5\>) rand_bit_stream2 tperiod=2n seed=5 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I59 (A\<4\>) rand_bit_stream2 tperiod=2n seed=4 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I58 (A\<3\>) rand_bit_stream2 tperiod=2n seed=3 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I57 (A\<2\>) rand_bit_stream2 tperiod=2n seed=2 vlogic_high=1 vlogic_low=0 \
+        tdel=2n trise=50p tfall=50p
+I73 (B\<1\>) rand_bit_stream2 tperiod=2n seed=30 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I74 (B\<2\>) rand_bit_stream2 tperiod=2n seed=29 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I75 (B\<3\>) rand_bit_stream2 tperiod=2n seed=28 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I76 (B\<4\>) rand_bit_stream2 tperiod=2n seed=27 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I77 (B\<5\>) rand_bit_stream2 tperiod=2n seed=26 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I78 (B\<6\>) rand_bit_stream2 tperiod=2n seed=25 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I79 (B\<7\>) rand_bit_stream2 tperiod=2n seed=24 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I80 (B\<8\>) rand_bit_stream2 tperiod=2n seed=23 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I81 (B\<9\>) rand_bit_stream2 tperiod=2n seed=22 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I82 (B\<10\>) rand_bit_stream2 tperiod=2n seed=20 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I83 (B\<11\>) rand_bit_stream2 tperiod=2n seed=21 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I84 (B\<12\>) rand_bit_stream2 tperiod=2n seed=19 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I85 (B\<13\>) rand_bit_stream2 tperiod=2n seed=18 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I86 (B\<14\>) rand_bit_stream2 tperiod=2n seed=17 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+I87 (B\<15\>) rand_bit_stream2 tperiod=2n seed=16 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+CIN_Out (Cin) rand_bit_stream2 tperiod=2n seed=40 vlogic_high=1 \
+        vlogic_low=0 tdel=2n trise=50p tfall=50p
+C19 (0 S\<15\>) capacitor c=40f
+C18 (0 S\<14\>) capacitor c=40f
+C17 (0 S\<13\>) capacitor c=40f
+C16 (0 S\<12\>) capacitor c=40f
+C15 (0 S\<11\>) capacitor c=40f
+C14 (0 S\<10\>) capacitor c=40f
+C12 (0 S\<8\>) capacitor c=40f
+C11 (0 S\<7\>) capacitor c=40f
+C7 (0 S\<6\>) capacitor c=40f
+C6 (0 S\<5\>) capacitor c=40f
+C5 (0 S\<4\>) capacitor c=40f
+C4 (0 S\<3\>) capacitor c=40f
+C3 (0 S\<2\>) capacitor c=40f
+C2 (0 S\<1\>) capacitor c=40f
+C1 (0 S\<0\>) capacitor c=40f
+C0 (0 net8) capacitor c=40f
+C13 (0 S\<9\>) capacitor c=40f
+V0 (net015 0) vsource dc=1 type=dc
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=90.0 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=100n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save I12:33 I12:34 I12:52 I12:35 
+saveOptions options save=allpub
+ahdl_include "/home/dicd21/dicd21028/5LIH0/rand_bit_stream/veriloga/veriloga.va"

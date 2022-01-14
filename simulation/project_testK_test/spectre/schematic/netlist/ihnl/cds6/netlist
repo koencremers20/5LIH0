@@ -1,0 +1,4 @@
+    I0 (G net17 GND Gnew VDD) OR
+    I1 (P Gold GND net17 VDD) AND
+ends Grey_cell
+// End of subcircuit definition.
