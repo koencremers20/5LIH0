@@ -1,0 +1,13 @@
+"5LIH0.NAND.schematic.termorder" nil
+"5LIH0.AND.schematic.termorder" nil
+"5LIH0.Postproc_cell.schematic.termorder" (("G" "GND" "P" "S" "VDD") ("G" "GND" "P" "S" "VDD"))
+"5LIH0.OR.schematic.termorder" (("A" "B" "GND" "OUT" "VDD") ("A" "B" "GND" "OUT" "VDD"))
+"5LIH0.Buffer_cell.schematic.termorder" nil
+"5LIH0.project_testR_OG2.schematic.termorder" nil
+"5LIH0.INV_post.schematic.termorder" nil
+"5LIH0.INV.schematic.termorder" (("GND" "IN" "OUT" "VDD") ("GND" "IN" "OUT" "VDD"))
+"5LIH0.Black_cell.schematic.termorder" nil
+"5LIH0.Grey_cell.schematic.termorder" (("G" "GND" "Gnew" "Gold" "P" "VDD") ("G" "GND" "Gnew" "Gold" "P" "VDD"))
+"5LIH0.XOR.schematic.termorder" (("A" "B" "GND" "OUT" "VDD") ("A" "B" "GND" "OUT" "VDD"))
+"5LIH0.Buffer_cell_post.schematic.termorder" nil
+"5LIH0.Preproc_cell.schematic.termorder" (("A" "B" "G" "GND" "VDD" "p") ("A" "B" "G" "GND" "VDD" "p"))

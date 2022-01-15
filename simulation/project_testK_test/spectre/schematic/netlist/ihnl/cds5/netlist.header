@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: Buffer_cell
+// View name: schematic
+subckt Buffer_cell G GND Gnew VDD

@@ -1,0 +1,4 @@
+    I1 (GND net11 Gnew VDD) INV
+    I0 (GND G net11 VDD) INV
+ends Buffer_cell
+// End of subcircuit definition.

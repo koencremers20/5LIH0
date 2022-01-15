@@ -1,0 +1,71 @@
+ahdlcmicompile: Compiling ahdlcmi in input.ahdlSimDB//e32e9d94976e6f2e6b4a309f4ff1c5aa.rand_bit_stream2.ahdlcmi/Linux-64/ for Linux-64 with optimize using gcc on Mon Jan 10 14:25:05 CET 2022 [5.0]
+ahdlcmicompile: Generating makefile
+PATH:  /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/cdsgcc/gcc/4.1-x86_64/install/bin:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/bin:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/bin/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/bin:/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/bin:/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools/bin/64bit:/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools/bin:/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/share/oa/bin:/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools/dfII/bin:/home/dicd21/dicd21028/zinc/bin:/home/dicd21/dicd21028/bin:/usr/local/texlive/2020/bin/x86_64-linux:/usr/lib64/qt-3.3/bin:/home/dicd21/dicd21028/perl5/bin:/usr/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+LD_LIBRARY_PATH:  /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/cdsgcc/gcc/4.1-x86_64/install/lib:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/giganta/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/mdl/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/mmsim/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/tcltk-8.4.20/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/inca/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/dfII/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/lib/64bit:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/lib:/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/../../libs_centos7
+ERROR: ld.so: object '/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools.lnx86/dfII/../lib/64bit/libstdc++.so' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools.lnx86/dfII/../lib/64bit/libstdc++.so' from LD_PRELOAD cannot be preloaded: ignored.
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/bin/gnumake -j8 -f GNUmakefile
+ERROR: ld.so: object '/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools.lnx86/dfII/../lib/64bit/libstdc++.so' from LD_PRELOAD cannot be preloaded: ignored.
+Cleaning ./obj/optimize/5.0
+rm -f -rf ./obj/optimize/5.0
+ERROR: ld.so: object '/opt/tools/cadence/2019-20/RHELx86/IC_6.1.8.060/tools.lnx86/dfII/../lib/64bit/libstdc++.so' from LD_PRELOAD cannot be preloaded: ignored.
+Compiling C file rand_bit_stream2.c (optimize)
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/cdsgcc/gcc/4.8/bin/gcc  -march=k8 -ffast-math -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include -c rand_bit_stream2.c -o obj/optimize/5.0/rand_bit_stream2.o || rm -f -f obj/optimize/5.0/rand_bit_stream2.o
+<stdin>: In function 'rand_bit_stream2_ParamInit':
+<stdin>:307:2: warning: floating constant exceeds range of 'double' [-Woverflow]
+<stdin>:308:2: warning: floating constant exceeds range of 'double' [-Woverflow]
+<stdin>:351:2: warning: floating constant exceeds range of 'double' [-Woverflow]
+<stdin>:352:2: warning: floating constant exceeds range of 'double' [-Woverflow]
+<stdin>:387:2: warning: floating constant exceeds range of 'double' [-Woverflow]
+<stdin>:388:2: warning: floating constant exceeds range of 'double' [-Woverflow]
+<stdin>: In function 'rand_bit_stream2_InitState':
+<stdin>:813:1: warning: passing argument 2 of 'aslDevInterInitState' from incompatible pointer type [enabled by default]
+In file included from <stdin>:24:0:
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2099:38: note: expected 'char *' but argument is of type 'long int *'
+     ASL_FUNC_DECL_START extern char *aslDevInterInitState( unsigned long, char *, size_t );
+                                      ^
+<stdin>: In function 'rand_bit_stream2_pDC_Load':
+<stdin>:1514:980: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast [enabled by default]
+In file included from <stdin>:24:0:
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2374:37: note: expected 'void *' but argument is of type 'long int'
+     ASL_FUNC_DECL_START extern void aslDevFillZeorDiagonalElemet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+                                     ^
+<stdin>: In function 'rand_bit_stream2_pCompare':
+<stdin>:1568:1327: warning: assignment makes integer from pointer without a cast [enabled by default]
+<stdin>:1568:910: warning: passing argument 1 of 'memcpy' makes pointer from integer without a cast [enabled by default]
+In file included from /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlPiCmi.h:5:0,
+                 from /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:81,
+                 from <stdin>:24:
+/usr/include/string.h:42:14: note: expected 'void * __restrict__' but argument is of type 'long int'
+ extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+              ^
+<stdin>:1568:910: warning: passing argument 2 of 'memcpy' makes pointer from integer without a cast [enabled by default]
+In file included from /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlPiCmi.h:5:0,
+                 from /opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:81,
+                 from <stdin>:24:
+/usr/include/string.h:42:14: note: expected 'const void * __restrict__' but argument is of type 'long int'
+ extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+              ^
+<stdin>:1568:1564: warning: assignment makes integer from pointer without a cast [enabled by default]
+<stdin>: In function 'rand_bit_stream2_pGetMatrixPointers':
+<stdin>:1574:2224: warning: assignment makes integer from pointer without a cast [enabled by default]
+<stdin>: In function 'rand_bit_stream2_pAnalTranLoad':
+<stdin>:1616:1952: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast [enabled by default]
+In file included from <stdin>:24:0:
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2374:37: note: expected 'void *' but argument is of type 'long int'
+     ASL_FUNC_DECL_START extern void aslDevFillZeorDiagonalElemet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+                                     ^
+<stdin>: In function 'rand_bit_stream2_pSaveRestart':
+<stdin>:1642:551: warning: passing argument 2 of 'aslDevAvarSR' from incompatible pointer type [enabled by default]
+In file included from <stdin>:24:0:
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1203:43: note: expected 'struct ahdlAnalogVar *' but argument is of type 'char *'
+     ASL_FUNC_DECL_START extern PklError_e aslDevAvarSR( int, struct ahdlAnalogVar *, char *, char *, char *, PklJar_t * );
+                                           ^
+<stdin>: In function 'rand_bit_stream2_pSaveRestartInst':
+<stdin>:1645:553: warning: passing argument 2 of 'aslDevAvarSR' from incompatible pointer type [enabled by default]
+In file included from <stdin>:24:0:
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1203:43: note: expected 'struct ahdlAnalogVar *' but argument is of type 'char *'
+     ASL_FUNC_DECL_START extern PklError_e aslDevAvarSR( int, struct ahdlAnalogVar *, char *, char *, char *, PklJar_t * );
+                                           ^
+rm -f -rf rand_bit_stream2.c
+/opt/tools/cadence/2016-17/RHELx86/MMSIM_15.10.627/tools.lnx86/cdsgcc/gcc/4.8/bin/gcc -shared -O3 -m64 -fPIC -o obj/optimize/5.0/libahdlcmi_rand_bit_stream2.so ./obj/optimize/5.0/rand_bit_stream2.o  -Wl,-rpath,/usr/lib -Wl,-rpath,/lib -s 

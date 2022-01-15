@@ -1,0 +1,3 @@
+    I0 (G P GND S VDD) XOR
+ends Postproc_cell
+// End of subcircuit definition.

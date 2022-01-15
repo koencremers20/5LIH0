@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: Postproc_cell
+// View name: schematic
+subckt Postproc_cell G GND P S VDD

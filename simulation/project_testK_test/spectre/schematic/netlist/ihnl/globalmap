@@ -1,0 +1,22 @@
+CADENCE IHNL11140
+$model
+5LIH0/Buffer_cell_post/schematic Buffer_cell_post
+5LIH0/project_testR_OG2/schematic project_testR_OG2
+5LIH0/Preproc_cell/schematic Preproc_cell
+5LIH0/Buffer_cell/schematic Buffer_cell
+5LIH0/AND/schematic AND
+5LIH0/XOR/schematic XOR
+5LIH0/OR/schematic OR
+5LIH0/NAND/schematic NAND
+5LIH0/project_testK_test/schematic project_testK_test
+5LIH0/Postproc_cell/schematic Postproc_cell
+5LIH0/INV_post/schematic INV_post
+5LIH0/INV/schematic INV
+5LIH0/Black_cell/schematic Black_cell
+5LIH0/Grey_cell/schematic Grey_cell
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

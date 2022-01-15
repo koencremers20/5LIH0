@@ -1,0 +1,12 @@
+HEADER
+"PSFversion" "1.00"
+"I0n" "OR"
+"I2n I1n" "AND"
+"Gv" ":1v"
+"GNDv" ":2v"
+"Gnewv" ":3v"
+"Goldv" ":4v"
+"Pv" ":5v"
+"Pnewv" ":6v"
+"Poldv" ":7v"
+"VDDv" ":8v"

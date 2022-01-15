@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: INV_post
+// View name: schematic
+subckt INV_post GND IN OUT VDD

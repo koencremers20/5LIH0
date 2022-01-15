@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: Grey_cell
+// View name: schematic
+subckt Grey_cell G GND Gnew Gold P VDD

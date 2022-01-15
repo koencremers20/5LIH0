@@ -1,0 +1,16 @@
+CADENCE IHNL111414
+
+5LIH0 OR schematic cds0
+5LIH0 NAND schematic cds1
+5LIH0 INV schematic cds2
+5LIH0 AND schematic cds3
+5LIH0 Black_cell schematic cds4
+5LIH0 Buffer_cell schematic cds5
+5LIH0 Grey_cell schematic cds6
+5LIH0 XOR schematic cds7
+5LIH0 Postproc_cell schematic cds8
+5LIH0 Preproc_cell schematic cds9
+5LIH0 INV_post schematic cds10
+5LIH0 Buffer_cell_post schematic cds11
+5LIH0 project_testR_OG2 schematic cds12
+5LIH0 project_testK_test schematic cds13

@@ -1,0 +1,5 @@
+
+// Library name: 5LIH0
+// Cell name: AND
+// View name: schematic
+subckt AND A B GND OUT VDD
